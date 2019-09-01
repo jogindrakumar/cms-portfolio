@@ -1,0 +1,20 @@
+.nav-item :hover{
+    color:white;
+    background-color:#0275d8;
+    
+    
+}
+.active{
+   
+  background-color:#0275d8;
+  
+}
+.active a{
+   
+    color:white;
+    
+  }
+.nav-item{
+    
+    font-size: 22px;
+} 
