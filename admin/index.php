@@ -23,6 +23,12 @@
         <a class="nav-link" href="skill.php">skill</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="services.php">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="work.php">Work</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">message</a>
       </li>
       <li class="nav-item">

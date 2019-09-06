@@ -24,6 +24,12 @@
         <a class="nav-link" href="skill.php">skill</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="services.php">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="work.php">Work</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">message</a>
       </li>
       <li class="nav-item">
@@ -56,14 +62,18 @@
     $abt2 = $row['abt2'];
     $email = $row['email'];
     $address = $row['addres'];
+    $image = $row['img'];
+   
     
     
 ?>
+<p><img src="images/<?php echo $image;?>" alt="" width="150px" height="100px" class="img-thumbnail"></p>
     <h4><?php echo $first_name; ?></h4>
 <p> <?php echo $abt1; ?></p>
 <p> <?php echo $abt2; ?></p>
 <p> <?php echo $email; ?></p>
 <p> <?php echo $address; ?></p>
+
  
 <a href="includes/edit_profile.php?id=<?php echo $id;?>"><i class="fa fa-edit fa-edit" aria-hidden="true" style="font-size:25px;"></i></a>
 

@@ -15,7 +15,7 @@
   </div>
   <div class="card-block">
     <h4 class="card-title">Design</h4></a>
-    <p class="card-text">Roasted pecans, butter and vanilla come together to make this wonderful ice cream</p>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa.</p>
   </div>
 </div>
     </div>
@@ -28,7 +28,7 @@
   </div>
   <div class="card-block">
     <h4 class="card-title">Development</h4></a>
-    <p class="card-text">Roasted pecans, butter and vanilla come together to make this wonderful ice cream</p>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa. </p>
   </div>
 </div>
     </div><br>
@@ -40,7 +40,7 @@
   </div>
   <div class="card-block">
     <h4 class="card-title">Deploy </h4></a>
-    <p class="card-text">Roasted pecans, butter and vanilla come together to make this wonderful ice cream</p>
+    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa.</p>
   </div>
 </div>
     </div>

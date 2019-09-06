@@ -1,66 +1,64 @@
 
-
 <?php
-$result = $conn->query("SELECT images FROM slider");
+
+
+$query = "SELECT * FROM slider";
+$result = mysqli_query($conn,$query);
+
+$rowcount = mysqli_num_rows($result);
+
+?>
+
+<?php 
 
 
 ?>
-<?php ?>
 
 
-<!-- <img src="images/about-1.jpg" alt="" height="100px" width="100px"> -->
-
-<div class="bd-example">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-    <?php
-$i = 0;
-foreach($result as $row){
-  $active = '';
-  if($i==0){
-    $actives = 'active';
-  }
-
-  
-?>
 
 
-      <li data-target="#carouselExampleCaptions" data-slide-to="<?php $i ;?>" class="<?php $actives; ?>"></li>
-  
-      <!-- <li data-target="#carouselExampleCaptions" data-slide-to="2"></li> -->
-      <?php
-$i++ ; }
-
-?>
-    </ol>
-    <div class="carousel-inner">
-    <?php
-$i = 0;
-foreach($result as $row){
-  $active = '';
-  if($i==0){
-    $actives = 'active';
-  }
-
-
-?>
-      <div class="carousel-item<?php $actives;?>">
-        <img src="images/<?php echo $row['images'] ;?>" class="d-block w-100" alt="..." height="400px" width="100%" margin="auto">
-        
-      </div>
-    
-      <?php $i++ ; } ?>
-     
+  <!-- main container -->
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-sm-12">
+               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+   <?php
+       for($i=1;$i<=$rowcount;$i++)
+       {
+           $row = mysqli_fetch_array($result);
+       
+          if($i==1){
+      
+      
+      ?>
+    <div class="carousel-item active">
+      <img src="images/<?php echo $row['images'];?>" class="d-block w-100" alt="..." width="100%" height="auto">
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    
+    <?php }else{
+        ?>
+    <div class="carousel-item">
+      <img src="images/<?php echo $row['images'];?>" class="d-block w-100" alt="..." width="100%" height="auto">
+    </div><?php } ?>
+    <?php }  ?>
   </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<img src="../images/about-1.jpg" alt="" height="100px" width="100px">
-
+               
+               
+           </div>
+       </div>
+       
+       
+       
+   </div> 
+    <br>
+    

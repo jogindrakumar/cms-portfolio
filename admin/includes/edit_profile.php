@@ -9,9 +9,13 @@ if(isset($_POST['submit'])){
  $abt2= $_POST['abt2'];
  $email= $_POST['email'];
  $address= $_POST['address'];
+ $image= $_FILES['image']['name'];
+ $tmp_image= $_FILES['image']['tmp_name'];
+
+ move_uploaded_file($tmp_image,"../images/$image");
 
 
-$query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address' WHERE id=$about_id";
+$query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address',img='$image' WHERE id=$about_id";
 $result = mysqli_query($conn,$query);
 if($result){
    
@@ -48,7 +52,7 @@ if(isset($_GET['id'])){
 <div class="row">
 <div class="col-sm-8">
 <h4 class="text-center text-primary">Edit Details</h4>
-<form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+<form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
 <div class="form-group">
 <label for="name">Name</label>
 <input type="text" name="first_name" class="form-control" value="<?php echo $post['first_name'] ;?>">
@@ -68,6 +72,11 @@ if(isset($_GET['id'])){
 <div class="form-group">
 <label for="name">address</label>
 <input type="text" name="address" class="form-control" value="<?php echo $post['addres'] ;?>">
+</div>
+<div class="form-group">
+
+<label for="name">Image</label>
+<input type="file" name="image" class="form-control" value=""><p class="text-success">previous image <span><img src="../images/<?php echo $post['img'] ;?>" alt="" width="100px" height="100px"></span></p>
 </div>
 
 <input type="hidden" name="about_id" value="<?php echo $post['id']; ?>">

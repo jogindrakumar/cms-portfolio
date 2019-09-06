@@ -11,11 +11,6 @@
 <div class="row">
 <div class="col-sm-3">
 <!-- aboutphoto -->
-
-<img src="images/about-1.jpg" alt="" height="200px" width="200px">
-
-</div>
-<div class="col-sm-9" id="about">
 <?php 
 $query = "SELECT * FROM about";
 $result = mysqli_query($conn,$query);
@@ -24,9 +19,15 @@ mysqli_close($conn);
 
 
 ?>
+<?php foreach($about as $about) : ?>
+<img src="images/<?php echo $about['img']; ?>" alt="" height="200px" width="200px">
+
+</div>
+<div class="col-sm-9" id="about">
 
 
-<h3>About Me</h3><?php foreach($about as $about) : ?>
+
+<h3>About Me</h3>
 
 
 <p style="font-size:20px;"><?php echo $about['first_name'];?> </p>
