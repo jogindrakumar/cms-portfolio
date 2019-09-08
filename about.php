@@ -27,18 +27,20 @@ mysqli_close($conn);
 
 
 
-<h3>About Me</h3>
+<h3 class="text-primary">About Me</h3>
 
 
-<p style="font-size:20px;"><?php echo $about['first_name'];?> </p>
+
 <p style="font-size:20px;"><?php echo $about['abt1'];?> </p>
+<p style="font-size:20px;"><?php echo $about['abt2'];?> </p>
+
 
 
 <?php endforeach; ?>
 <p class="" style="font-size:25px;">
-<a href="https://www."><i class="fa fa-facebook social-media" aria-hidden="true"></i></a>
-        <a href="https://"><i class="fa fa-twitter social-media" aria-hidden="true"></i></a>
-        <a href="https://"><i class="fa fa-instagram social-media" aria-hidden="true"></i></a>
+<a href="https://www."><i class="fab fa-facebook-f"></i></a>
+        <a href="https://"><i class="fab fa-twitter"></i></a>
+        <a href="https://"><i class="fab fa-instagram"></i></a>
 </p>
 
 

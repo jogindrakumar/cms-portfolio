@@ -52,13 +52,21 @@ if(mail($toEmail,$subject,$body,$headers)){
 
 
 ?>
+<div class="container">
+<div class="row">
 
-<div class="col-sm-12" id="contact">
+<div class="col-sm-12 bg-dark" id="contact">
 <br>
-<h2 class="text-center tag-line">Wanna start work with Me ?</h2><br>
+<h2 class="text-center text-white tag-line">Wanna start work with Me ?</h2><br>
 
 
-</div><br>
+</div>
+</div>
+
+</div>
+
+
+<br>
 
 
 
@@ -123,20 +131,31 @@ if(mail($toEmail,$subject,$body,$headers)){
    
 
 </div>
+<?php
+?>
+<?php 
+$query = "SELECT * FROM about";
+$result = mysqli_query($conn,$query);
+$about = mysqli_fetch_all($result,MYSQLI_ASSOC);
+mysqli_close($conn);
 
+
+?>
 
 
 
 <div class="col-sm-4">
 <h4 style="color:grey;">My Contact Details</h4>
-<p style="color:grey;">E-Mail <br> info@jogindrakumar.com </p>
+<?php foreach($about as $about) : ?>
+<p style="color:grey;"><i class="fas fa-envelope"></i><?php echo $about['email'];?> </p>
 
-<p style="color:grey;">Address:</p>
-<p style="color:grey; font-size:15px;"> Delhi,India</p>
 
+<p style="color:grey; font-size:15px;"><i class="fas fa-map-marker-alt"></i>
+<?php echo $about['addres'];?> </p>
+<?php endforeach; ?>
 <div class="container">
 <div class="row">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13996.315465136408!2d77.27682472365139!3d28.717188986670905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfc0720d3ad5b%3A0xa216e3b579aafaf3!2sJohripur%2C+New+Delhi%2C+Delhi!5e0!3m2!1sen!2sin!4v1565340455260!5m2!1sen!2sin" width="600" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.163741622!2d76.81306442366602!3d28.64727993557044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1567951402381!5m2!1sen!2sin" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
 
 </div>

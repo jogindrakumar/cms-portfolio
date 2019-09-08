@@ -25,6 +25,6 @@
 <?php echo $title ; ?>
 
  <div class="progress" style="height: 5px;">
-    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <?php echo $per; ?>%" aria-valuenow="<?php echo $per; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: <?php echo $per; ?>%" aria-valuenow="<?php echo $per; ?>" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
     <?php   echo "<br>"; } ?>

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
  $image= $_FILES['image']['name'];
  $tmp_image= $_FILES['image']['tmp_name'];
 
- move_uploaded_file($tmp_image,"../images/$image");
+ move_uploaded_file($tmp_image,"../../images/$image");
 
 
 $query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address',img='$image' WHERE id=$about_id";
@@ -22,7 +22,7 @@ if($result){
     echo "<h5 class='text-success'>update successfully.</h5>";
     header("Location:../profile.php");
 }else{
-    echo "failed to update "; 
+    echo "failed to update ".mysqli_error($conn); 
 }
 
 
@@ -76,7 +76,7 @@ if(isset($_GET['id'])){
 <div class="form-group">
 
 <label for="name">Image</label>
-<input type="file" name="image" class="form-control" value=""><p class="text-success">previous image <span><img src="../images/<?php echo $post['img'] ;?>" alt="" width="100px" height="100px"></span></p>
+<input type="file" name="image" class="form-control" value=""><p class="text-success">previous image <span><img src="../../images/<?php echo $post['img'] ;?>" alt="" width="100px" height="100px"></span></p>
 </div>
 
 <input type="hidden" name="about_id" value="<?php echo $post['id']; ?>">

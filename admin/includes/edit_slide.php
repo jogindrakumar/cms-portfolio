@@ -7,7 +7,7 @@ $id = $_GET['id'];
  $images= $_FILES['image']['name'];
  $image_temp = $_FILES['image']['tmp_name'];
 
- move_uploaded_file($image_temp, "../images/$images");
+ move_uploaded_file($image_temp, "../../images/$images");
 
 
 $query = "UPDATE slider SET images='$images' WHERE id='$id'";
@@ -66,7 +66,7 @@ if(isset($_GET['id'])){
 <div class="container">
 <div class="row">
 <div class="card bg-dark text-white">
-  <img src="/project1/admin/images/<?php echo $post['images']; ?>" alt="" width="200px" height="200px" class="card-img" alt="...">
+  <img src="../../images/<?php echo $post['images']; ?>" alt="" width="200px" height="200px" class="card-img" alt="...">
   <div class="card-img-overlay">
     <h5 class="card-title text-center">previous Images</h5>
     

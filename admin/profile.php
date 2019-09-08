@@ -4,37 +4,38 @@
 <?php include "includes/header.php";?>
 
 
-<body><br>
+<body>
+<?php include "includes/navbar.php";?>
+
+<br>
     <div class="col-sm-12">
     <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
     
     <div class="flex-column" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php"><i class="fa fas fa-bars"></i>Dashboard<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="slider.php">Image Slider</a>
+        <a class="nav-link" href="slider.php"><i class="fa far fa-image"></i>Image Slider</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="profile.php">profile</a>
+        <a class="nav-link" href="profile.php"><i class="fa fas fa-user"></i>profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="skill.php">skill</a>
+        <a class="nav-link" href="skill.php"><i class="fa fas fa-cogs"></i>skill</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="services.php">Services</a>
+        <a class="nav-link" href="services.php"><i class="fa fas fa-wrench"></i>Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="work.php">Work</a>
+        <a class="nav-link" href="work.php"><i class="fa fas fa-briefcase"></i>Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">message</a>
+        <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">setting</a>
-      </li>
+     
     </ul>
   </div>
     
@@ -45,8 +46,8 @@
 
 
 
-    <div class="col-sm-9">
-    <h5>Profile</h5>
+    <div class="col-sm-10">
+    <div class=""> <h5 class="text-primary text-center">PROFILE</h5></div><br><hr>
 
 
     <?php 
@@ -67,18 +68,31 @@
     
     
 ?>
-<p><img src="images/<?php echo $image;?>" alt="" width="150px" height="100px" class="img-thumbnail"></p>
-    <h4><?php echo $first_name; ?></h4>
-<p> <?php echo $abt1; ?></p>
-<p> <?php echo $abt2; ?></p>
-<p> <?php echo $email; ?></p>
-<p> <?php echo $address; ?></p>
 
- 
-<a href="includes/edit_profile.php?id=<?php echo $id;?>"><i class="fa fa-edit fa-edit" aria-hidden="true" style="font-size:25px;"></i></a>
+
+ <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="images/<?php echo $image;?>" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-primary"><?php echo $first_name; ?></h5>
+        <p class="card-text"><?php echo $abt1; ?></p>
+        <p class="card-text"><small class="text-muted"><?php echo $abt2; ?></small></p>
+        <p class="card-text"><small class="text-muted"><?php echo $email; ?></small></p>
+        <p class="card-text"><small class="text-muted"><?php echo $address; ?></small></p>
+<a href="includes/edit_profile.php?id=<?php echo $id;?>" class="btn btn-dark">Edit</a>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- <i class="fa fa-edit fa-edit" aria-hidden="true" style="font-size:25px;"></i> -->
 
     </div>
-    <?php  echo "<br>"; } ?>
+    <?php  } ?>
     
     </div>
     
@@ -97,7 +111,7 @@
     
     
     ?>
-
+<?php include "includes/footer.php";?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

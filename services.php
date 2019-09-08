@@ -1,51 +1,53 @@
-<div class="col-sm-12" id="services">
-<br>
-<h2 class="text-center tag-line">Services</h2><br>
-
-
-</div><br>
-        <div class="col-sm-12">
-
+<div class="container">
 <div class="row">
-    <div class="col-sm-4">
-    <a href="">
-    <div class="card">
-  <div class="embed-responsive embed-responsive-16by9">
-     <img alt="Card image cap" class="card-img-top embed-responsive-item" src="images/image_1.jpg" />
-  </div>
-  <div class="card-block">
-    <h4 class="card-title">Design</h4></a>
-    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa.</p>
-  </div>
+<div class="col-sm-12 bg-dark" id="services">
+<br>
+<h2 class="text-center tag-line text-white">Services</h2><br>
+
+
 </div>
-    </div>
-<br><br>
-    <div class="col-sm-4">
-    <a href="">
-    <div class="card">
-  <div class="embed-responsive embed-responsive-16by9">
-     <img alt="Card image cap" class="card-img-top embed-responsive-item" src="images/image_2.jpg" />
-  </div>
-  <div class="card-block">
-    <h4 class="card-title">Development</h4></a>
-    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa. </p>
-  </div>
+
+
 </div>
-    </div><br>
+
+</div>
+
+
+<br>
+<div class="container">
+        <div class="col-sm-12">
+     
+<div class="row">
+<?php 
+   $query = "SELECT * FROM services";
+   $result = mysqli_query($conn,$query);
+   while($row=mysqli_fetch_array($result)){
+     $id = $row['id'];
+     $title = $row['title'];
+     $details = $row['details'];
+     $img = $row['img'];
+     
+  
+   
+   ?>
     <div class="col-sm-4">
-    <a href="./sheen_academy.php">
+  
+   <img src="" alt="">
     <div class="card">
   <div class="embed-responsive embed-responsive-16by9">
-     <img alt="Card image cap" class="card-img-top embed-responsive-item" src="images/image_3.jpg" />
+     <img alt="Card image cap" class="card-img-top embed-responsive-item" src="images/<?php echo $img;?>">
   </div>
   <div class="card-block">
-    <h4 class="card-title">Deploy </h4></a>
+    <h4 class="card-title"><?php echo $title;?></h4></a>
     <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa.</p>
   </div>
 </div>
     </div>
 <br>
+ 
 
+
+  <?php }?>
     
 
 
@@ -54,5 +56,6 @@
 
 
 
+        </div>
         </div>
   <br>

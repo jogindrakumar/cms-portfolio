@@ -1,47 +1,41 @@
 
-
-
-
-
-
-
 <?php  include "../config/db.php"; ?>
 
 
 <?php include "includes/header.php";?>
 
 
-<body><br>
+<body>
+<?php include "includes/navbar.php";?>
+<br>
     <div class="col-sm-12">
     <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
     
     <div class="flex-column" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php"><i class="fa fas fa-bars"></i>Dashboard<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="slider.php">Image Slider</a>
+        <a class="nav-link" href="slider.php"><i class="fa far fa-image"></i>Image Slider</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">profile</a>
+        <a class="nav-link" href="profile.php"><i class="fa fas fa-user"></i>profile</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="skill.php">skill</a>
+        <a class="nav-link" href="skill.php"><i class="fa fas fa-cogs"></i>skill</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="services.php">Services</a>
+        <a class="nav-link" href="services.php"><i class="fa fas fa-wrench"></i>Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="work.php">Work</a>
+        <a class="nav-link" href="work.php"><i class="fa fas fa-briefcase"></i>Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">message</a>
+        <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">setting</a>
-      </li>
+     
     </ul>
   </div>
     
@@ -52,8 +46,9 @@
 
 
 
-    <div class="col-sm-9">
-    <h5>skill</h5>
+    <div class="col-sm-10">
+   <div class="bg"> <h5 class="text-primary text-center">SKILL</h5></div><br><hr>
+   <br>
     <?php 
     $query = "SELECT * FROM skill";
     $result = mysqli_query($conn,$query);
@@ -80,7 +75,7 @@
  <div class="row">
  <div class="col-sm-7">
  <div class="progress" style="height: 5px;">
-    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <?php echo $per; ?>%" aria-valuenow="<?php echo $per; ?>" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: <?php echo $per; ?>%" aria-valuenow="<?php echo $per; ?>" aria-valuemin="0" aria-valuemax="100">
     
     </div>
   </div>
@@ -89,13 +84,13 @@
  </div>
  <div class="col-sm-5">
  
- <a href="includes/edit.php?id=<?php echo $skill_id;?>"><i class="fa fa-edit fa-edit" aria-hidden="true" style="font-size:25px;"></i></a>
+ <a href="includes/edit.php?id=<?php echo $skill_id;?>" class="btn btn-dark">EDIT</a>
  
  
 
  
- <a href="index.php?delete=<?php echo $skill_id;?>">
- <i class="fa fa-trash fa-trash" aria-hidden="true" style="font-size:25px;color:red;"></i></a>
+ <a href="skill.php?delete=<?php echo $skill_id;?>" class="btn btn-secondary">
+ DELETE</a>
  
 
 
@@ -107,7 +102,7 @@
  
  </div>
 
-    <?php  echo "<br>"; } ?>
+    <?php   } ?>
 
     <?php
     if(isset($_GET['delete'])){
@@ -116,8 +111,12 @@
         $query = "DELETE FROM skill WHERE id=$the_skill_id";
         $delete_query = mysqli_query($conn,$query);
        
-        
-         echo "<h6 class='text-success text-center'>skill Delete successfully.</h6>";
+        if(!$delete_query){
+         
+          echo "failed".mysqli_error($conn);
+        }
+        header("Location: skill.php");
+         
         
     }
     
@@ -135,7 +134,7 @@
     
     </div>
    
-
+    <?php include "includes/footer.php";?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
