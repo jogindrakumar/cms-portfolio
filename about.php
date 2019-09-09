@@ -1,5 +1,5 @@
 
-
+<?php include "config/db.php";?>
 
 
 
@@ -71,28 +71,9 @@ mysqli_close($conn);
 ?>
 
 
+
 </p>
-<!-- 
-<p>CSS
-<div class="progress" style="height: 5px;">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-</p>
-<p>Bootstrap
-<div class="progress" style="height: 5px;">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-</p>
-<p>javascript
-<div class="progress" style="height: 5px;">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-</p>
-<p>PHP
-<div class="progress" style="height: 5px;">
-  <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-</p> -->
+
 </div>
 </div>
 

@@ -1,5 +1,5 @@
 <?php include "header.php";?>
-<?php include "../includes/db.php";?>
+<?php include "../../config/db.php";?>
 
 <?php
 $work_id = $_GET['id'];
