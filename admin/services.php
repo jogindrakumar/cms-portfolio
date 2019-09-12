@@ -1,15 +1,15 @@
 
 
 
+<?php include "../config/db.php";?>
+
+<?php include "function.php";?> 
 
 
-
-
-<?php  include "../config/db.php"; ?>
 
 
 <?php include "includes/header.php";?>
-
+<?php confirm_login();?>
 
 <body>
 <?php include "includes/navbar.php";?>

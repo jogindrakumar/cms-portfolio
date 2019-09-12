@@ -1,6 +1,9 @@
-<?php include "header.php";?>
+
+<?php include "../function.php";?>
 <?php include "../../config/db.php";?>
 
+<?php include "header.php";?>
+<?php confirm_login_addskill();?>
 <?php
 if(isset($_POST['submit'])){
 $id = $_GET['id'];  

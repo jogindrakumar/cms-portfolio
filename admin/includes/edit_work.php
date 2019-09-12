@@ -1,6 +1,7 @@
 <?php include "header.php";?>
+<?php include "../function.php";?>
 <?php include "../../config/db.php";?>
-
+<?php confirm_login_addskill();?>
 <?php
 $work_id = $_GET['id'];
  $query = "SELECT * FROM work WHERE id =$work_id";
@@ -26,6 +27,8 @@ $image = $_FILES['image']['name'];
 $temp_image = $_FILES['image']['tmp_name'];
 
 move_uploaded_file($temp_image,"../../images/$image");
+$title = mysqli_real_escape_string($conn,$title);
+$details = mysqli_real_escape_string($conn,$details);
 
 $query = "UPDATE work SET title='$title',
                             details='$details',

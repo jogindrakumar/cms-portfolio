@@ -1,6 +1,9 @@
-<?php include "header.php";?>
 <?php include "../../config/db.php";?>
 
+<?php include "../function.php";?>
+<?php include "header.php";?>
+
+<?php confirm_login_addskill();?>
 <?php
 if(isset($_POST['submit'])){
  $about_id = $_POST['about_id'];  
@@ -13,6 +16,11 @@ if(isset($_POST['submit'])){
  $tmp_image= $_FILES['image']['tmp_name'];
 
  move_uploaded_file($tmp_image,"../../images/$image");
+ $first_name = mysqli_real_escape_string($conn,$first_name);
+ $abt1= mysqli_real_escape_string($conn,$abt1);
+ $abt2= mysqli_real_escape_string($conn,$abt2);
+ $email= mysqli_real_escape_string($conn,$email);
+ $address= mysqli_real_escape_string($conn,$address);
 
 
 $query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address',img='$image' WHERE id=$about_id";

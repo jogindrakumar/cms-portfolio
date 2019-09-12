@@ -1,6 +1,8 @@
-<?php include "header.php";?>
 <?php include "../../config/db.php";?>
+<?php include "../function.php";?>
+<?php include "header.php";?>
 
+<?php confirm_login_addskill();?>
 <?php
 if(isset($_POST['submit'])){
  $service_id = $_POST['service_id'];  
@@ -10,6 +12,8 @@ $image = $_FILES['image']['name'];
 $temp_image = $_FILES['image']['tmp_name'];
 
 move_uploaded_file($temp_image,"../../images/$image");
+$title = mysqli_real_escape_string($conn,$title);
+$details = mysqli_real_escape_string($conn,$details);
 
 $query = "UPDATE services SET title='$title',
                             details='$details',
