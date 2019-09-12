@@ -1,8 +1,10 @@
 <?php  include "../config/db.php"; ?>
-
+ 
+<?php include "function.php";?> 
 
 
 <?php include "includes/header.php";?>
+<?php confirm_login();?>
 <body>
 <?php include "includes/navbar.php";?>
 <br>
@@ -38,6 +40,8 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="logout.php"><i class="fas fa-power-off"></i>Sign-Out</a>
       </li>
      
     </ul>

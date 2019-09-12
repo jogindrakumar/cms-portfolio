@@ -35,7 +35,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
-     
+      </li> <li class="nav-item">
+        <a class="nav-link" href="logout.php"><i class="fas fa-power-off"></i>Sign-Out</a>
+      </li>
     </ul>
   </div>
     

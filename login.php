@@ -1,4 +1,6 @@
+
 <?php include "config/db.php";?>
+<?php session_start();?>
 <?php
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
@@ -12,7 +14,10 @@ if(isset($_POST['submit'])){
         $db_user_role = $row['user_role'];
     }
 
-    if($username==$db_username && $password==$db_password && $db_user_role=='admin'){
+    if($username===$db_username && $password===$db_password && $db_user_role==='admin'){
+         $_SESSION['username'] = $db_username;
+        $_SESSION['password'] = $db_user_password;
+        $_SESSION['user_role'] = $db_user_role;
         header("Location: admin/");
     
     }else{
