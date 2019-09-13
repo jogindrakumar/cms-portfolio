@@ -3,10 +3,9 @@
 
 
 <?php 
-$_SESSION['username'] = null;
-$_SESSION['password'] = null;
-$_SESSION['user_role'] = null;
 
+session_start();
+session_destroy();
  
 header("Location:../index.php");
 
