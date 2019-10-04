@@ -71,7 +71,7 @@ $service_id = $_GET['id'];
 
 
 <input type="hidden" name="service_id" value="<?php echo $post['id']; ?>">
-<input type="submit" name="submit" class="btn btn-primary">
+<input type="submit" name="submit" class="btn btn-outline-primary">
 
 </form>
 

@@ -75,7 +75,7 @@ mysqli_close($conn);
 
 
 <input type="hidden" name="work_id" value="<?php echo $post['id']; ?>">
-<input type="submit" name="submit" class="btn btn-primary">
+<input type="submit" name="submit" class="btn btn-outline-primary">
 
 </form>
 

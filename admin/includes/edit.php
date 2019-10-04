@@ -52,7 +52,7 @@ $skill_id = $_GET['id'];
 <input type="text" name="per" class="form-control" value="<?php echo $post['per'] ;?>">
 </div>
 <input type="hidden" name="skill_id" value="<?php echo $post['id']; ?>">
-<input type="submit" name="submit" class="btn btn-primary">
+<input type="submit" name="submit" class="btn btn-outline-primary">
 
 </form>
 

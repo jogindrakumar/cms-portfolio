@@ -45,6 +45,7 @@ if(isset($_POST['submit'])){
     <title>simple login system</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body><br>
     <div class="container">
@@ -121,7 +122,10 @@ if(isset($_POST['submit'])){
     <input type="password" name="password" class="form-control">
     
     </div>
-    <input type="submit" name="submit" value="login" class="btn btn-primary">
+    <div class="form-group">
+    <input type="submit" name="submit" value="login" class="form-control btn btn-outline-primary">
+    
+    </div>
     
     </form>
     
@@ -138,8 +142,11 @@ if(isset($_POST['submit'])){
     
 
     </div>
-    
+   
     </div>
+    <br>
+
+    <?php include "includes/footer.php"; ?>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

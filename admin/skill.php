@@ -33,7 +33,7 @@
         <a class="nav-link" href="work.php"><i class="fa fas fa-briefcase"></i>Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
+        <a class="nav-link" href="msg.php"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
       </li> <li class="nav-item">
         <a class="nav-link" href="logout.php"><i class="fas fa-power-off"></i>Sign-Out</a>
@@ -86,12 +86,12 @@
  </div>
  <div class="col-sm-5">
  
- <a href="includes/edit.php?id=<?php echo $skill_id;?>" class="btn btn-dark">EDIT</a>
+ <a href="includes/edit.php?id=<?php echo $skill_id;?>" class="btn btn-outline-dark">EDIT</a>
  
  
 
  
- <a href="skill.php?delete=<?php echo $skill_id;?>" class="btn btn-secondary">
+ <a href="skill.php?delete=<?php echo $skill_id;?>" class="btn btn-outline-danger">
  DELETE</a>
  
 
@@ -127,7 +127,7 @@
    
 <a href="includes/add_skill.php" class="btn btn-primary">Add Skill</a>
 
- 
+
 
     </div>
 

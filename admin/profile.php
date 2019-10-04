@@ -33,7 +33,7 @@
         <a class="nav-link" href="work.php"><i class="fa fas fa-briefcase"></i>Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
+        <a class="nav-link" href="msg.php"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
       </li> <li class="nav-item">
         <a class="nav-link" href="logout.php"><i class="fas fa-power-off"></i>Sign-Out</a>
@@ -84,7 +84,7 @@
         <p class="card-text"><small class="text-muted"><?php echo $abt2; ?></small></p>
         <p class="card-text"><small class="text-muted"><?php echo $email; ?></small></p>
         <p class="card-text"><small class="text-muted"><?php echo $address; ?></small></p>
-<a href="includes/edit_profile.php?id=<?php echo $id;?>" class="btn btn-dark">Edit</a>
+<a href="includes/edit_profile.php?id=<?php echo $id;?>" class="btn btn-outline-dark">Edit</a>
 
       </div>
       

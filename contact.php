@@ -1,4 +1,5 @@
 <?php include "config/db.php";?>
+
 <?php 
 $msg = '';
 $msgClass = '';
@@ -19,24 +20,36 @@ if(filter_var($email,FILTER_VALIDATE_EMAIL) === false){
     $msg = 'please enter correct E-mail address';
     $msgClass = 'alert-danger';
 }else{
-    //passed
-$toEmail = 'contact@nxtgenmove.com';
-$subject = 'Contact Request From'.$name;
-$body = '<h2>Contact Request</h2>
-        <h4> Name</h4><p>'.$name.'</p>
-        <h4> Email</h4><p>'.$email.'</p>
-        <h4> Email</h4><p>'.$message.'</p>';
 
-$headers = "MIME-version1.o"."\r\n";
-$headers .= "Contet-Type:text/html;charset=UTF-8"."\r\n";
-$headers .= "From:".$name."<".$email.">"."\r\n";
-if(mail($toEmail,$subject,$body,$headers)){
-    $msg = 'your message send successfully!!';
-    $msgClass = 'alert-success';
+$query = "INSERT INTO msg(visiter_name,email,msg) VALUES('$name','$email','$message')";
+$result = mysqli_query($conn,$query);
+if($result){
+ 
+  $msg = 'your message send successfully!!';
+  $msgClass = 'alert-success';
 }else{
-    $msg = 'your message failed !!';
-    $msgClass = 'alert-danger';
-}
+      $msg = 'your message failed !!';
+      $msgClass = 'alert-danger';
+  }
+
+    //passed
+// $toEmail = 'contact@nxtgenmove.com';
+// $subject = 'Contact Request From'.$name;
+// $body = '<h2>Contact Request</h2>
+//         <h4> Name</h4><p>'.$name.'</p>
+//         <h4> Email</h4><p>'.$email.'</p>
+//         <h4> Email</h4><p>'.$message.'</p>';
+
+// $headers = "MIME-version1.o"."\r\n";
+// $headers .= "Contet-Type:text/html;charset=UTF-8"."\r\n";
+// $headers .= "From:".$name."<".$email.">"."\r\n";
+// if(mail($toEmail,$subject,$body,$headers)){
+//     $msg = 'your message send successfully!!';
+//     $msgClass = 'alert-success';
+// }else{
+//     $msg = 'your message failed !!';
+//     $msgClass = 'alert-danger';
+// }
 }
 
 

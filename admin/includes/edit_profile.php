@@ -88,7 +88,7 @@ if(isset($_GET['id'])){
 </div>
 
 <input type="hidden" name="about_id" value="<?php echo $post['id']; ?>">
-<input type="submit" name="submit" class="btn btn-primary">
+<input type="submit" name="submit" class="btn btn-outline-primary">
 
 </form>
 

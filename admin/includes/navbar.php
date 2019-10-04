@@ -29,9 +29,13 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
+      
     </ul>
+    
   </div>
+  <h5 class="text-right text-primary">Welcome  <?php echo $_SESSION['username']  ;?></h5>
 </nav>
+
 </div>
 
 </div>

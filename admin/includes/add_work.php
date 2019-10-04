@@ -49,7 +49,7 @@ if($result){
 <label for="image">Image</label>
 <input type="file" name="image" class="form-control">
 </div>
-<input type="submit" name="add_work" class="btn btn-primary">
+<input type="submit" name="add_work" class="btn btn-outline-primary">
 
 </form>
 

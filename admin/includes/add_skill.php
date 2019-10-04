@@ -41,7 +41,7 @@ if($result){
 <label for="skill_per">percentage</label>
 <input type="text" name="per" class="form-control">
 </div>
-<input type="submit" name="add_skill" class="btn btn-primary">
+<input type="submit" name="add_skill" class="btn btn-outline-primary">
 
 </form>
 

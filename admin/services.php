@@ -40,7 +40,7 @@
         <a class="nav-link" href="work.php"><i class="fa fas fa-briefcase"></i>Work</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fas fa-envelope-open"></i>message</a>
+        <a class="nav-link" href="msg.php"><i class="fa fas fa-envelope-open"></i>message</a>
       </li>
       </li> <li class="nav-item">
         <a class="nav-link" href="logout.php"><i class="fas fa-power-off"></i>Sign-Out</a>
@@ -95,10 +95,10 @@
     <p class="card-text"><?php echo $details ; ?></p>
     
 
-    <a href="#" class="btn btn-primary">View</a>
+    <a href="#" class="btn btn-outline-primary">View</a>
   
  
-<a class="btn btn-dark" href="includes/edit_services.php?id=<?php echo $service_id;?>">Edit</a>
+<a class="btn btn-outline-dark" href="includes/edit_services.php?id=<?php echo $service_id;?>">Edit</a>
 
 
 
