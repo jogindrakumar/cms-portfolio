@@ -38,6 +38,7 @@
     $abt2 = $row['abt2'];
     $email = $row['email'];
     $address = $row['addres'];
+    $maps = $row['mps'];
     $image = $row['img'];
    
     
@@ -50,7 +51,7 @@
     <div class="col-md-4">
       <img src="images/<?php echo $image;?>" class="card-img" alt="...">
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6">
       <div class="card-body">
         <h5 class="card-title text-primary"><?php echo $first_name; ?></h5>
         <p class="card-text"><?php echo $abt1; ?></p>
@@ -62,11 +63,18 @@
       </div>
       
     </div>
+    <div class="col-sm-2">
+    <div class="card">
+    <?php echo $maps;?>
+    </div>
+    
+    </div>
   </div>
 </div>
 <!-- <i class="fa fa-edit fa-edit" aria-hidden="true" style="font-size:25px;"></i> -->
 
     </div>
+  
     <?php  } ?>
     
     </div>

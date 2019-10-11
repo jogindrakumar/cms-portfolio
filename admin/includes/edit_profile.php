@@ -12,6 +12,7 @@ if(isset($_POST['submit'])){
  $abt2= $_POST['abt2'];
  $email= $_POST['email'];
  $address= $_POST['address'];
+ $maps= $_POST['mps'];
  $image= $_FILES['image']['name'];
  $tmp_image= $_FILES['image']['tmp_name'];
 
@@ -21,9 +22,10 @@ if(isset($_POST['submit'])){
  $abt2= mysqli_real_escape_string($conn,$abt2);
  $email= mysqli_real_escape_string($conn,$email);
  $address= mysqli_real_escape_string($conn,$address);
+ $maps= mysqli_real_escape_string($conn,$maps);
 
 
-$query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address',img='$image' WHERE id=$about_id";
+$query = "UPDATE about SET first_name='$first_name',abt1='$abt1',abt2='$abt2',email='$email',addres='$address',mps='$maps',img='$image' WHERE id=$about_id";
 $result = mysqli_query($conn,$query);
 if($result){
    
@@ -80,6 +82,11 @@ if(isset($_GET['id'])){
 <div class="form-group">
 <label for="name">address</label>
 <input type="text" name="address" class="form-control" value="<?php echo $post['addres'] ;?>">
+</div>
+<div class="form-group">
+<label for="name">Maps</label>
+<input type="text" name="mps" class="form-control" value="">
+<p class="text-danger">Note: Search your location on google maps click on share then click on Embed a map then copy html and paste here  </p>
 </div>
 <div class="form-group">
 

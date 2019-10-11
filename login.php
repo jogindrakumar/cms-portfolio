@@ -18,11 +18,11 @@ if(isset($_POST['submit'])){
     }
 
     if($username===$db_username && $password===$db_password && $db_user_role==='admin'){
-         $_SESSION['username'] = $db_username;
-        $_SESSION['password'] = $db_user_password;
-        $_SESSION['user_role'] = $db_user_role;
-        header("Location: admin/");
-    
+          $_SESSION['username'] = $db_username;
+          $_SESSION['password'] = $db_user_password;
+          $_SESSION['user_role'] = $db_user_role;
+          header("Location: admin/");
+      
     }else{
         header("Location: index.php");
     }
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>simple login system</title>
+    <title>JK-portfolio </title> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -63,20 +63,12 @@ if(isset($_POST['submit'])){
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+     
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#work">Work</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#contact">Contact</a>
+        <a class="nav-link text-white" href="login.php">Login</a>
       </li>
      
     </ul>
