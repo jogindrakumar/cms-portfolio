@@ -1,4 +1,5 @@
 <?php include "config/db.php";?>
+<?php include "config/config.php";?>
 
 <?php 
 $msg = '';
@@ -24,11 +25,14 @@ if(filter_var($email,FILTER_VALIDATE_EMAIL) === false){
 $query = "INSERT INTO msg(visiter_name,email,msg) VALUES('$name','$email','$message')";
 $result = mysqli_query($conn,$query);
 if($result){
- 
-  $msg = 'your message send successfully!!';
+ $msg = "<script>
+          swal('Message sent successfully!', '', 'success')</script>";
+  // $msg = 'your message send successfully!!';
   $msgClass = 'alert-success';
+  
 }else{
-      $msg = 'your message failed !!';
+      $msg = "<script>
+      swal('your message failed!', '', 'warning')</script>";
       $msgClass = 'alert-danger';
   }
 
@@ -55,7 +59,8 @@ if($result){
 
 }else{
     //failed
-    $msg = 'please check all input field';
+    $msg = "<script>
+    swal('Please check all input field!', '', 'error')</script>";
     $msgClass = 'alert-danger';
 }
 
@@ -104,7 +109,9 @@ if($result){
    <h4 style="color:grey;">Get in touch</h4></div>
    <div class="card-body">
    <?php  if($msg !=''): ?>
-<div class="<?php echo $msgClass ;?>"><?php echo $msg; ?></div>
+<div class="<?php echo $msgClass ;?>"><?php echo $msg; ?>
+
+</div>
 
 <?php endif; ?>
    <form method="POST" action="<?php  echo $_SERVER['PHP_SELF'];?>">

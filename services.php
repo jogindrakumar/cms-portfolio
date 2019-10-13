@@ -4,7 +4,7 @@
 <div class="row">
 <div class="col-sm-12 bg-dark" id="services">
 <br>
-<h2 class="text-center tag-line text-white">Services</h2><br>
+<h2 class="text-center tag-line text-white">Services <i class="fa fas fa-wrench"></i></h2><br>
 
 
 </div>
@@ -41,7 +41,7 @@
   </div>
   <div class="card-block">
     <h4 class="card-title"><?php echo $title;?></h4></a>
-    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum veritatis suscipit dicta non nihil voluptatem modi culpa.</p>
+    <p class="card-text"><?php echo $details; ?></p>
   </div>
 </div>
     </div>

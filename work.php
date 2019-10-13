@@ -4,7 +4,7 @@
 <div class="row">
 <div class="col-sm-12 bg-dark" id="work">
 <br>
-<h2 class="text-center text-white tag-line">Work</h2><br>
+<h2 class="text-center text-white tag-line">Work <i class="fab fa-github"></i></h2><br>
 
 
 </div>

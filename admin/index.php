@@ -62,7 +62,7 @@ $skill_count = mysqli_num_rows($result);
   <br>
   
   </div>
-  <a href="skill.php" class="btn btn-primary">SKILL</a>
+  
 </div>
     </div>
     <div class="col-sm-3">
@@ -78,7 +78,7 @@ $msg_count = mysqli_num_rows($result);
   <div class="card-header bg-warning">
   <i class="dash fa fas fa-envelope-open"><span class="dash-text"> Inbox</span></i>
   <h5 class="text-right text-white">Total <?php echo $msg_count; ?></h5>
-  </div>
+  </div><br>
   <?php
    $query = "SELECT * FROM msg ";
    $result = mysqli_query($conn,$query);
@@ -91,9 +91,12 @@ $msg_count = mysqli_num_rows($result);
    
    
    ?>
-<div class="card-body">
+<div class="">
     
-    <p class="card-text"> <span class="text-primary font-weight-bold text-uppercase"><i class="fas fa-user text-success"></i> <?php echo $name ; ?></span>      </p>
+    <p class="card-text"> <span class="text-primary font-weight-bold text-uppercase">
+    <i class="fa fas fa-envelope-open"></i>
+    
+     <a href="msg.php"><?php echo $name ; ?></a></span>      </p>
   
     
   </div>
@@ -101,19 +104,9 @@ $msg_count = mysqli_num_rows($result);
 
   
    <?php }?>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
    
-   <br>
-   <br>
-   <br>
-   <a href="msg.php" class="btn btn-primary">INBOX</a>
+   
+   
 </div>
     </div>
     <div class="col-sm-3">
@@ -139,25 +132,8 @@ $posts = mysqli_fetch_all($result,MYSQLI_ASSOC);
    <?php endforeach; ?>
     
   </div>
-  <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   
-   <br>
-   <br>
-   <br>
-   <br>
-   
-   <br>
-   <br>
-   <br>
-   <br>
-   <a href="services.php" class="btn btn-primary">SERVICES</a>
+  
+  
 </div>
     </div>
     <div class="col-sm-3">
@@ -177,30 +153,18 @@ $posts = mysqli_fetch_all($result,MYSQLI_ASSOC);
   <h5 class="text-right text-white">Total <?php echo $work_count; ?></h5>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
+    
     <?php foreach($posts as $post) :?>
     
     <p class="card-text text-uppercase font-weight-bold"><i class="fa fa-arrow-circle-right text-success"></i> <?php echo $post['title']; ?></p>
 
     <?php endforeach; ?>
-    <br>
-   <br>
-   <br>
-   <br>
-   <br>
+  
    
-   <br>
-   <br>
-   <br>
-   <br>
-   
-   <br>
-   <br>
-   <br>
   
     
   </div>
-  <a href="work.php" class="btn btn-primary">WORK</a>
+ 
 </div>
     </div>
     

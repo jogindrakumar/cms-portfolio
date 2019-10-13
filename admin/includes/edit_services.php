@@ -80,4 +80,5 @@ $service_id = $_GET['id'];
 </div>
 
 </div>
+
 <?php include "footer.php";?>

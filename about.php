@@ -59,7 +59,7 @@ mysqli_close($conn);
 <div class="col-sm-12">
 <div class="row">
 <div class="col-sm-3">
-<h3>My Skills</h3>
+<h3>Skills <i class="fa fas fa-cogs text-primary"></i></h3>
 
 
 
