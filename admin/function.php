@@ -40,7 +40,7 @@ if(isset($_POST['add_skill'])){
   
   $skill = mysqli_real_escape_string($conn,$skill);
   $per = mysqli_real_escape_string($conn,$per);
-  if($skill == "" || empty($per)){
+  if(empty($skill) || empty($per)){
     // echo  "all field fill required";
 
     echo "<script>
@@ -74,3 +74,4 @@ if(isset($_POST['add_skill'])){
 
 
 ?>
+<?php ?>

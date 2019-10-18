@@ -16,6 +16,13 @@ move_uploaded_file($temp_image,"../../images/$image");
 $title = mysqli_real_escape_string($conn,$title);
 $details = mysqli_real_escape_string($conn,$details);
 
+if($skill == "" || empty($per)){
+   
+
+    echo "<script>
+    swal('check all field!', '', 'error')</script>";
+}
+
 $query = "INSERT INTO work(title,details,img) VALUES('$title','$details','$image')";
 $result = mysqli_query($conn,$query);
 if($result){

@@ -43,24 +43,23 @@
 
 <div class="row">
 <?php 
-    $query = "SELECT * FROM work";
-    $result = mysqli_query($conn,$query);
-    if(!$result){
-        echo "query failed".mysqli_error($conn);
-    }
-    while($row=mysqli_fetch_array($result)){
-    $work_id = $row['id'];
-    $title = $row['title'];
-    $details = $row['details'];
-    $image = $row['img'];
-    
+  $query = "SELECT * FROM work";
+  $result = mysqli_query($conn,$query);
+  if(!$result){
+      echo "query failed".mysqli_error($conn);
+  }
+  
+  $works = mysqli_fetch_all($result,MYSQLI_ASSOC);
+  foreach($works as $work):
+  $work_id = $work['id']; 
+  
 ?> 
                   <div class="col-sm-4">
                     <div class="card" style="width: 18rem;">
-  <img src="../images/<?php echo $image; ?>" class="card-img-top" alt="...">
+  <img src="../images/<?php echo $work['img']; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-  <h5 class="card-title"><?php echo $title ; ?></h5>
-    <p class="card-text"><?php echo $details ; ?></p>
+  <h5 class="card-title"><?php echo $work['title']; ?></h5>
+    <p class="card-text"><?php echo $work['details'] ; ?></p>
     
 
     <a href="#" class="btn btn-outline-primary">View</a>
@@ -77,7 +76,7 @@
 
                   <br>    
                   </div>
-                  <?php   } ?>
+    <?php endforeach;   ?>
                 </div>
               
                 <?php
