@@ -74,4 +74,3 @@ if(isset($_POST['add_skill'])){
 
 
 ?>
-<?php ?>

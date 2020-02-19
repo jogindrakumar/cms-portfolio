@@ -14,12 +14,7 @@
     <?php include "navigations/msg_nav.php"; ?>
     
     </div>
-
-
-
-
-
-
+    
     <div class="col-sm-10">
    <div class="">
    <h5 class="text-center text-primary"><i class="fa fas fa-envelope-open"></i> Inbox

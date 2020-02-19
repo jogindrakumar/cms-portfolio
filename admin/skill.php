@@ -16,13 +16,6 @@
     
     </div>
 
-
-
-
-
-
-
-
     <div class="col-sm-10">
    <div class="bg"> <h5 class="text-primary text-center"><i class="fa fas fa-cogs"></i> SKILL</h5>
    </div><br><hr>
@@ -91,14 +84,8 @@
  
  <a href="includes/edit.php?id=<?php echo $skill_id;?>" class="btn btn-outline-dark">EDIT</a>
  
- 
-
- 
  <a href="skill.php?delete=<?php echo $skill_id;?>" class="btn btn-outline-danger">
  DELETE</a>
- 
-
-
  
  </div>
  
@@ -134,9 +121,6 @@ header("Location: skill.php");
     
     ?>
    
-
-
-
     </div>
 
     

@@ -29,8 +29,6 @@
      $details = $row['details'];
      $img = $row['img'];
      
-  
-   
    ?>
     <div class="col-sm-4">
   
@@ -47,17 +45,9 @@
     </div>
 <br>
  
-
-
   <?php }?>
     
-
-
 </div>
-
-
-
-
         </div>
         </div>
   <br>

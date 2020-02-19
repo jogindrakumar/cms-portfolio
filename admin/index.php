@@ -9,10 +9,6 @@
 <?php include "includes/navbar.php";?>
 <br>
 
-
-
-
-
     <div class="col-sm-12">
     
     <div class="row">
@@ -101,12 +97,8 @@ $msg_count = mysqli_num_rows($result);
     
   </div>
 
-
-  
    <?php }?>
-   
-   
-   
+  
 </div>
     </div>
     <div class="col-sm-3">
@@ -180,5 +172,3 @@ $posts = mysqli_fetch_all($result,MYSQLI_ASSOC);
     </div>
 
     <?php include "includes/footer.php";?>
-
-   

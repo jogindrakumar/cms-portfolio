@@ -56,19 +56,14 @@ if($result){
 // }
 }
 
-
-}else{
+  }else{
     //failed
     $msg = "<script>
     swal('Please check all input field!', '', 'error')</script>";
     $msgClass = 'alert-danger';
-}
-
-
+      }
 
  }
-
-
 
 ?>
 <div class="container">

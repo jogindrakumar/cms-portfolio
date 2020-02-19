@@ -15,12 +15,6 @@
     $title = $row['title'];
     $per = $row['per'];
     
-
-    
-
-  
-    
-   
 ?>
 <?php echo $title ; ?>
 

@@ -1,6 +1,7 @@
 # cms-portfolio
 this is my PHP cms-portfolio
-In this cms portfolio you can modify every details what you need in your personal portfolio .
+In this cms portfolio you can modify every details what you need in your personal portfolio
+(v1.0) .
 
  
 

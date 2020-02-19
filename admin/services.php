@@ -5,9 +5,6 @@
 
 <?php include "function.php";?> 
 
-
-
-
 <?php include "includes/header.php";?>
 <?php confirm_login();?>
 
@@ -22,11 +19,6 @@
    <?php include "navigations/services_nav.php"; ?>
     
     </div>
-
-
-
-
-
 
     <div class="col-sm-10">
    <div class="">

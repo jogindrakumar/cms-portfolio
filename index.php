@@ -15,10 +15,6 @@
 
 <!-- slider end -->
 
-
-
-
-
 <!-- some space -->
 <br>
 <br>
@@ -39,7 +35,6 @@
 
 <?php include "work.php"; ?>
 <!-- work section end -->
-
 
 <!-- contact here -->
 

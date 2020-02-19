@@ -16,11 +16,6 @@
     
     </div>
 
-
-
-
-
-
     <div class="col-sm-10">
    <div class="">
    <h5 class="text-center text-primary"><i class="fa fas fa-briefcase"></i> WORK
@@ -34,12 +29,6 @@
    <br>
    <hr>
 <!-- get id -->
-<?php
-
-
-
-
-?>
 
 <div class="row">
 <?php 

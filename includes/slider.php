@@ -9,13 +9,6 @@ $rowcount = mysqli_num_rows($result);
 
 ?>
 
-<?php 
-
-
-?>
-
-
-
 
   <!-- main container -->
    <div class="container-fluid">

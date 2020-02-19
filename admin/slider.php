@@ -4,10 +4,6 @@
 <?php include "function.php";?> 
 
 
-
-
-
-
 <?php include "includes/header.php";?>
 
 <?php confirm_login();?>
@@ -21,11 +17,6 @@
   <?php include "navigations/slider_nav.php"; ?>
     
     </div>
-
-
-
-
-
 
     <div class="col-sm-10">
    <div class="row">
@@ -85,9 +76,6 @@ while($row=mysqli_fetch_assoc($result)){
     
     ?> 
    
-   
-   
-   
    </div>
    <?php
 $msg = '';
@@ -112,11 +100,6 @@ if(isset($_POST['submit'])){
 
 ?>
 
-
-
-
-
-
 <?php 
 
 $query = "SELECT * FROM slider";
@@ -125,10 +108,6 @@ $result = mysqli_query($conn,$query);
 $rowcount = mysqli_num_rows($result);
 
 ?>
-
-
-
-
 
  <!-- carousel slider shown here  -->
  
